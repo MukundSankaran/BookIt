@@ -3,6 +3,7 @@ package com.mukundsankaran.bookit.model;
 
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotNull;
+import java.io.Serializable;
 import java.time.Instant;
 import java.util.List;
 import java.util.Map;
@@ -13,7 +14,7 @@ import java.util.concurrent.atomic.AtomicInteger;
  *
  * SeatHold Model
  */
-public class SeatHold {
+public class SeatHold implements Serializable {
 
     private static final AtomicInteger ID_GEN = new AtomicInteger();
 

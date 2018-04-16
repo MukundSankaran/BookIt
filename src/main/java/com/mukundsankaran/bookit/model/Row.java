@@ -2,6 +2,7 @@ package com.mukundsankaran.bookit.model;
 
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
+import java.io.Serializable;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicInteger;
 
@@ -10,7 +11,7 @@ import java.util.concurrent.atomic.AtomicInteger;
  *
  * Row Model
  */
-public class Row {
+public class Row implements Serializable {
 
     private static final AtomicInteger ID_GEN = new AtomicInteger();
 

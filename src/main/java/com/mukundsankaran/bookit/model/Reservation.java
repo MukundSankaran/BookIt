@@ -3,6 +3,7 @@ package com.mukundsankaran.bookit.model;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
+import java.io.Serializable;
 import java.util.List;
 import java.util.Map;
 import java.util.UUID;
@@ -12,7 +13,7 @@ import java.util.UUID;
  *
  * Reservation Model
  */
-public class Reservation {
+public class Reservation implements Serializable {
 
     /**
      * Reservation ID - Unique for each Reservation

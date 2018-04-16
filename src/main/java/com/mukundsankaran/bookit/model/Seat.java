@@ -1,6 +1,7 @@
 package com.mukundsankaran.bookit.model;
 
 import javax.validation.constraints.NotNull;
+import java.io.Serializable;
 import java.util.concurrent.atomic.AtomicInteger;
 
 /**
@@ -8,7 +9,7 @@ import java.util.concurrent.atomic.AtomicInteger;
  *
  * Seat Model
  */
-public class Seat {
+public class Seat implements Serializable {
 
     private static final AtomicInteger ID_GEN = new AtomicInteger();
 
