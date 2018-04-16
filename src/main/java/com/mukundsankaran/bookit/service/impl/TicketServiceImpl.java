@@ -46,6 +46,7 @@ public class TicketServiceImpl implements TicketService {
      */
     @PostConstruct
     private void init() {
+        // convert into milliseconds
         holdExpiryTime = bookItProperties.getVenue().getHoldExpiryTimeInMinutes() * 60000;
     }
 

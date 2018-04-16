@@ -22,7 +22,12 @@ a staggered fashion starting from the row nearest to the stage.
 6. If an incorrect "seatHoldId" is provided while attempting to reserve a group of held seats, the customer's email can be used to
 retrieve the correct group of held seats (assuming the email provided is correct, that is).
 7. In all cases where a SeatHold object or Reservation ID cannot be generated, a null is acceptable as the return value.
-8. The seating arrangement need not be an N x N matrix as provided in the sample arrangement in the problem description.
+8. SeatHold expiry times can be configured, and the minimum value is 1 minute and maximum is 30 minutes. A scheduled task runs every
+minute to check for and clean up expired holds.
+9. Number of rows and seats are integers that need to be greater than or equal to 1
+10. The seating arrangement need not be an N x N matrix as provided in the sample arrangement in the problem description.
+11. The seating plan can either be 'equal' or 'random'. In the case of 'equal', an attempt is made to allocate equal number of seats
+to each row, and in the case of 'random', the number of seats assigned to each row is random.
 
 ### Building and Running Tests:
 
@@ -36,6 +41,9 @@ $> mvn clean test
 ``` shellsession
 $> mvn spring-boot:run
 ```
+- The external properties file 'application.properties' contains configuration properties for the number of rows, seats,
+seating plan, event name and hold expiry time.
+
 
 
 
